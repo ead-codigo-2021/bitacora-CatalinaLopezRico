@@ -1,3 +1,5 @@
+/* Resets de estilos*/
+/* Elemento raíz */
 :root {
     --font-family-base: 'Roboto', sans-serif;
     --font-family-alt: 'JetBrains Mono', monospace;
@@ -12,13 +14,13 @@ html {
         font-size: 13px;
     }
 }
-
+/* Body */
 body {
     font-family: var(--font-family-base);
     font-size: 1rem;
     line-height: 1.5;
-    color: blue;
 }
+/* Estilos tipográficos */
 h1,
 h2,
 h3,
@@ -31,4 +33,23 @@ h1 {
 }
 address {
     color: tomato;
+}
+/* Container */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Cabecera */
+.site-navigation {
+    display: flex;
+    justify-content: space-evenly;
+}
+.site-navigation a {
+    text-decoration: none;
+    padding: .5rem 2rem;
+    background-color: aqua;
+}
+.site-navigation a:hover{
+    text-decoration: underline;
 }
