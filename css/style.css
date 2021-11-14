@@ -44,12 +44,47 @@ address {
 .site-navigation {
     display: flex;
     justify-content: space-evenly;
+    border-bottom: 1px solid grey;
 }
 .site-navigation a {
     text-decoration: none;
+    color: grey;
+    font-weight: bold;
     padding: .5rem 2rem;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
-.site-navigation a:hover{
+.site-navigation a.current {
     text-decoration: underline;
+    color: black
 }
+.site-navigation a:hover {
+    text-decoration: underline;
+    color: black
+}
+/* Main */
+.cards--grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    gap: 20px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .card {
+    padding: 2rem;
+    line-height: 1.25;
+    background-color: #eaeaea;
+    border-radius: 1rem;
+  }
+  .card__title {
+    margin-bottom: 1rem;
+  }
+  .card__description {
+    margin-bottom: 2rem;
+  }
+  .card__link {
+    margin-bottom: .5rem;
+  }
+  
+  
