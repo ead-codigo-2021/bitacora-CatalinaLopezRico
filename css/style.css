@@ -1,8 +1,19 @@
 /* Resets de estilos*/
+* {
+    box-sizing: border-box;
+}
+
 /* Elemento raíz */
 :root {
     --font-family-base: 'Roboto', sans-serif;
     --font-family-alt: 'JetBrains Mono', monospace;
+
+    --color-bg: #ffffff;
+    --color-dark: #000000;
+    --color-light: #7e7e7e;
+    --color-href: #0000ff;
+    --color-cards: #eaeaea;
+    --max-width-container: 1200px; 
 }
 
 html {
@@ -32,10 +43,16 @@ h1 {
     font-size: 2rem;
 }
 address {
-    color: tomato;
+    color: var(--color-light);
 }
 /* Container */
 .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+.container-footer {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -44,47 +61,75 @@ address {
 .site-navigation {
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--color-light);
 }
 .site-navigation a {
     text-decoration: none;
-    color: grey;
     font-weight: bold;
     padding: .5rem 2rem;
-    /* background-color: aqua; */
+    color: var(--color-light);
 }
 .site-navigation a.current {
     text-decoration: underline;
-    color: black
+    color: var(--color-dark);
 }
 .site-navigation a:hover {
     text-decoration: underline;
-    color: black
+    color: var(--color-dark);
 }
 /* Main */
+/* Tarjetas */
 .cards--grid {
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
     gap: 20px;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  .card {
+}
+.card {
     padding: 2rem;
     line-height: 1.25;
-    background-color: #eaeaea;
+    background-color: var(--color-cards);
     border-radius: 1rem;
-  }
-  .card__title {
+}
+.card__title {
     margin-bottom: 1rem;
-  }
-  .card__description {
+}
+.card__description {
     margin-bottom: 2rem;
-  }
-  .card__link {
+}
+.card__link {
     margin-bottom: .5rem;
-  }
-  
-  
+}
+/* Pie de página */
+.site-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.site-footer-card {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-bg);
+}
+address {
+    padding: .5rem 2rem;  
+    border-top: 1px solid var(--color-light);
+}
+/* Filtro imagen */
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+/* Estilo links */
+a {
+    color: var(--color-href);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
