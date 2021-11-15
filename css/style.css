@@ -11,7 +11,8 @@
     --color-bg: #ffffff;
     --color-dark: #000000;
     --color-light: #7e7e7e;
-    --color-href: #0000ff;
+    --color-href: #ff0000;
+    --color-href-hover: #b63e3e;
     --color-cards: #eaeaea;
     --max-width-container: 1200px; 
 }
@@ -50,7 +51,7 @@ address {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 .container-footer {
     max-width: 1200px;
@@ -107,6 +108,7 @@ address {
     bottom: 0;
     width: 100%;
     text-align: center;
+    background-color: var(--color-bg);
 }
 .site-footer-card {
     position: sticky;
@@ -132,4 +134,19 @@ a {
 }
 a:hover {
     text-decoration: underline;
+    color: var(--color-href-hover);
 }
+/* Clase */
+.home-post__pubdate {
+    color: var(--color-light);
+    font-style: italic;
+}
+.content-section {
+    margin-bottom: 2rem;
+}
+hr {
+    border:none;
+    border-top:1px dashed var(--color-light);
+    height:1px;
+    width:100%;
+  }
